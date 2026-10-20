@@ -37,6 +37,24 @@
     if (status && L.dataset) { status.textContent = "Available"; status.classList.add("is-live"); }
   })();
 
+  /* ------------------------------------------------------------ theme toggle (light by default) */
+  (function theme() {
+    var btn = $("#theme-toggle"), root = document.documentElement;
+    if (!btn) return;
+    function apply(dark) {
+      root.setAttribute("data-theme", dark ? "dark" : "light");
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+      btn.title = dark ? "Light theme" : "Dark theme";
+    }
+    apply(root.getAttribute("data-theme") === "dark");
+    btn.addEventListener("click", function () {
+      var dark = root.getAttribute("data-theme") !== "dark";
+      apply(dark);
+      try { localStorage.setItem("p2p-theme", dark ? "dark" : "light"); } catch (e) {}
+    });
+  })();
+
   /* ------------------------------------------------------------ math */
   (function math() {
     $all(".math[data-tex]").forEach(function (el) {
@@ -462,7 +480,7 @@
     var img = $("#ev-img"), cap = $("#ev-cap");
     if (!img) return;
     var EV = [
-      { src: "static/images/supp_modalities.webp", w: 1552, h: 692,
+      { src: "static/images/supp_modalities.webp", w: 1552, h: 717,
         alt: "Respiratory region crops and RAFT-Large flow for RGB, thermal, infant NIR and low-light NIR recordings.",
         cap: "Respiratory-centered appearance and RAFT-Large motion support across RGB, thermal, infant NIR, and low-light/occluded NIR recordings. Respiratory-motion visibility changes substantially with the modality." },
       { src: "static/images/supp_close.webp", w: 2400, h: 912,
@@ -480,6 +498,7 @@
       tabs.forEach(function (b, j) { b.setAttribute("aria-selected", i === j ? "true" : "false"); b.tabIndex = i === j ? 0 : -1; if (i === j && focus) b.focus(); });
       var e = EV[i];
       img.src = e.src; img.width = e.w; img.height = e.h; img.alt = e.alt; cap.textContent = e.cap;
+      img.style.maxWidth = Math.round(Math.min(1040, 540 * e.w / e.h)) + "px";
     }
     tabs.forEach(function (b, i) {
       b.addEventListener("click", function () { select(i); });
