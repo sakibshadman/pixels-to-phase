@@ -1,70 +1,33 @@
-# Pixels-to-Phase project page
+# Pixels-to-Phase
 
-Project page for **Pixels-to-Phase: Reliability-Aware Latent State-Space Modeling for Contactless Respiratory Estimation** (WACV 2027).
+**Reliability-Aware Latent State-Space Modeling for Contactless Respiratory Estimation**
 
-It is a plain static site (HTML, CSS and a little JavaScript) with no build step, so GitHub Pages can serve it as it is.
+Shadman Sakib, Nirmalya Roy
+University of Maryland, Baltimore County
 
-## Publish it on GitHub Pages
+*WACV 2027 (Main Track)*
 
-1. On GitHub, create a new **public** repository named `pixels-to-phase` (no README, no license).
-2. Upload everything in this folder to the repository:
-   - **In the browser:** open the new repository, choose *uploading an existing file*, drag in all files and folders from this folder, and commit.
-   - **With git:**
-     ```bash
-     cd pixels-to-phase
-     git init -b main
-     git add .
-     git commit -m "Add Pixels-to-Phase project page"
-     git remote add origin https://github.com/sakibshadman/pixels-to-phase.git
-     git push -u origin main
-     ```
-3. In the repository, open **Settings → Pages**. Under *Build and deployment*, set **Source** to *Deploy from a branch*, choose **main** and **/ (root)**, and save.
-4. After a minute or two the page is live at **https://sakibshadman.github.io/pixels-to-phase/**.
+[Project Page](https://sakibshadman.github.io/pixels-to-phase/)
 
-If you use a different repository name, update the two `og:` URLs near the top of `index.html` so link previews show the right image.
+## Overview
 
-## Before you share the link
+Pixels-to-Phase models breathing as a latent phase on the unit circle. At each frame, the phase is predicted from learned dynamics and then corrected by the video, weighted by an estimated observation reliability. Across RGB, NIR and thermal benchmarks, it reduces average respiratory-rate MAE from 1.69 to 1.51 breaths per minute.
 
-- [ ] **Paper and supplementary PDFs.** When you have the final camera-ready PDFs, put them in `static/pdfs/` and set `paper` and `supplementary` in `static/js/config.js`.
-- [ ] **BibTeX.** Add pages and DOI once the proceedings are out.
+Code and dataset release information will be posted on the project page.
 
-## Release code, data and other links later
+## Citation
 
-All release links live in one file, `static/js/config.js`. Every button whose link is `null` shows as *soon*. Paste a URL and push, and the button switches on:
-
-```js
-window.P2P_LINKS = {
-  paper: "static/pdfs/pixels_to_phase_wacv2027.pdf",
-  supplementary: "static/pdfs/pixels_to_phase_wacv2027_supp.pdf",
-  arxiv: "https://arxiv.org/abs/XXXX.XXXXX",
-  code: "https://github.com/sakibshadman/pixels-to-phase-code",
-  dataset: "https://…",          // also flips the dataset badge to "Available"
-  datacard: "https://…",
-  datasetRequest: "https://…",   // a request form works best
-  poster: null
-};
+```bibtex
+@inproceedings{sakib2027pixels,
+  title     = {Pixels-to-Phase: Reliability-Aware Latent State-Space
+               Modeling for Contactless Respiratory Estimation},
+  author    = {Sakib, Shadman and Roy, Nirmalya},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on
+               Applications of Computer Vision (WACV)},
+  year      = {2027}
+}
 ```
 
-To change what the dataset section says (for example the access terms or a new version number), edit the `#dataset` section in `index.html`.
+## License
 
-## What is in the folder
-
-```
-index.html                  the page
-static/css/site.css         styles (light theme by default, dark theme from the toggle)
-static/js/config.js         release links (edit this one)
-static/js/site.js           the live update-rule demo, method explorer, charts, tables
-static/images/              figures from the paper and supplementary, poster frame, social preview
-static/videos/              the explainer video (MP4, H.264, about 12 MB)
-static/fonts/               Latin Modern Roman and Sans (WOFF2)
-static/katex/               KaTeX for the equations
-```
-
-To replace the video, overwrite `static/videos/pixels_to_phase_explainer.mp4` and, if the first frame changes, `static/images/poster.jpg`.
-
-## Credits and licenses
-
-- Latin Modern fonts: GUST e-foundry, GUST Font License.
-- KaTeX: MIT License (see `static/katex/LICENSE`).
-- Figures, tables and text are from the Pixels-to-Phase paper and supplementary material.
-- The live simulation at the top of the page is a toy illustration of the update rule (Eq. 17). It is not output of the trained model.
+This website is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
