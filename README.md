@@ -25,11 +25,8 @@ If you use a different repository name, update the two `og:` URLs near the top o
 
 ## Before you share the link
 
-These items are placeholders and are marked in `index.html` with `TODO` comments:
-
-- [ ] **Authors.** Replace the two red "Co-author Name" placeholders in the hero, and check the affiliation numbers.
-- [ ] **BibTeX.** Replace `and others` in the citation block with the full author list. Update it again with pages and DOI once the proceedings are out.
-- [ ] **Paper and supplementary PDFs.** The PDFs used to build this page still show the review header and line numbers. When you have the final camera-ready PDFs, put them in `static/pdfs/` and set `paper` and `supplementary` in `static/js/config.js`.
+- [ ] **Paper and supplementary PDFs.** When you have the final camera-ready PDFs, put them in `static/pdfs/` and set `paper` and `supplementary` in `static/js/config.js`.
+- [ ] **BibTeX.** Add pages and DOI once the proceedings are out.
 
 ## Release code, data and other links later
 
@@ -54,7 +51,7 @@ To change what the dataset section says (for example the access terms or a new v
 
 ```
 index.html                  the page
-static/css/site.css         styles (light and dark themes)
+static/css/site.css         styles (light theme by default, dark theme from the toggle)
 static/js/config.js         release links (edit this one)
 static/js/site.js           the live update-rule demo, method explorer, charts, tables
 static/images/              figures from the paper and supplementary, poster frame, social preview
