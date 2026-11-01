@@ -34,7 +34,7 @@
       }
     });
     var status = $("#dataset-status");
-    if (status && L.dataset) { status.textContent = "Available"; status.classList.add("is-live"); }
+    if (status && L.dataset) { status.textContent = "Available on request"; status.classList.add("is-live"); }
   })();
 
   /* ------------------------------------------------------------ theme toggle (light by default) */
