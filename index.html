@@ -333,10 +333,10 @@
 <section id="dataset" class="section">
   <div class="container">
     <div class="h-row">
-      <h2>In-House Dataset v1.0</h2>
+      <h2>In-House Dataset v1.0 <span class="ds-name">· MPSC-RespView</span></h2>
       <span class="status" id="dataset-status">Release in preparation</span>
     </div>
-    <p class="prose">A versioned RGB corpus collected under an IRB-approved protocol with informed consent. It varies the factors that make breathing hard to see: posture, viewpoint, subject–camera distance, illumination, clothing texture and body motion. In the paper it serves as an additional evaluation resource alongside the public benchmarks.</p>
+    <p class="prose">A versioned RGB corpus collected under an IRB-approved protocol with informed consent. It varies the factors that make breathing hard to see: posture, viewpoint, subject–camera distance, illumination, clothing texture and body motion. In the paper it serves as an additional evaluation resource alongside the public benchmarks. It is now released to the research community as <strong>MPSC-RespView</strong> on <a href="https://huggingface.co/datasets/shadman-sakib/MPSC-RespView" target="_blank" rel="noopener">Hugging Face</a>, with a data card, statistics and a preview.</p>
 
     <div class="ds-figs">
       <figure class="fig">
@@ -352,14 +352,15 @@
     <div class="ds-body">
       <dl class="facts">
         <div><dt>Recordings</dt><dd>73 RGB videos: 50 indoor and 23 outdoor.</dd></div>
-        <div><dt>Indoor</dt><dd>1920 × 1080 at 30 fps, about 2–3.5 min each, with a synchronized respiratory-belt reference. Spontaneous and paced breathing (slow, regular, fast) in frontal seated, top-angular, backward-view and lying/supine views.</dd></div>
-        <div><dt>Outdoor</dt><dd>One-minute recordings at 4, 5, 6, 7, 9, 11, 13 and 15 m, each with about 20 s of normal breathing, 20 s of breath holding and 20 s of forced breathing.</dd></div>
-        <div><dt>Access</dt><dd>Because the videos can identify people, de-identified recordings are shared on reasonable request, subject to IRB, institutional and data-sharing requirements. The dataset is intended for respiratory-monitoring research, not clinical diagnosis or apnea assessment.</dd></div>
+        <div><dt>Indoor</dt><dd>Mostly Full HD at 30 fps, about 1.5–5 min each, recorded with a synchronized respiratory belt (belt reference signals are not part of the public release). Spontaneous and paced breathing (slow, regular, fast) in frontal seated, top-angular, backward-view and lying/supine views.</dd></div>
+        <div><dt>Outdoor</dt><dd>One-minute recordings at 4, 5, 6, 7, 9, 11 and 13 m, each with about 20 s of normal breathing, 20 s of breath holding and 20 s of forced breathing.</dd></div>
+        <div><dt>Access</dt><dd>Gated release on Hugging Face under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. Faces are anonymized and the videos contain no audio or names. Request access on the dataset page and accept the terms of use; requests are reviewed by the maintainers. The dataset is intended for respiratory-monitoring research, not clinical diagnosis or apnea assessment.</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:ssakib1@umbc.edu">ssakib1@umbc.edu</a> · <a href="mailto:nroy@umbc.edu">nroy@umbc.edu</a></dd></div>
       </dl>
       <div class="ds-side">
         <div class="links ds-links" role="list">
           <a class="btn" role="listitem" data-link="dataset" href="#" aria-disabled="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span>Download</span><span class="soon">soon</span></a>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span>Hugging Face</span><span class="soon">soon</span></a>
           <a class="btn" role="listitem" data-link="datacard" href="#" aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg><span>Data card</span><span class="soon">soon</span></a>
           <a class="btn" role="listitem" data-link="datasetRequest" href="#" aria-disabled="true">
