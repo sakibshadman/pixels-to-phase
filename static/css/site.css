@@ -338,3 +338,4 @@ table.small { font-size: 0.9rem; }
   .section + .section > .container { padding-top: 44px; }
   .prose, .stage-panel p, .fig figcaption { text-align: left; }
 }
+.ds-name { font-weight: 400; color: var(--ink-2); }
