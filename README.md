@@ -13,7 +13,7 @@ University of Maryland, Baltimore County
 
 Pixels-to-Phase models breathing as a latent phase on the unit circle. At each frame, the phase is predicted from learned dynamics and then corrected by the video, weighted by an estimated observation reliability. Across RGB, NIR and thermal benchmarks, it reduces average respiratory-rate MAE from 1.69 to 1.51 breaths per minute.
 
-The In-House Dataset v1.0 is released as **MPSC-RespView** on [Hugging Face](https://huggingface.co/datasets/shadman-sakib/MPSC-RespView) (gated access, CC BY-NC 4.0). Code release information will be posted on the project page.
+The In-House Dataset v1.0 is released as **MPSC-RespView** on [Hugging Face](https://huggingface.co/datasets/shadman-sakib/MPSC-RespView) (open download, CC BY-NC 4.0). Code release information will be posted on the project page.
 
 ## Citation
 
