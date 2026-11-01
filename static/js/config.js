@@ -17,14 +17,14 @@ window.P2P_LINKS = {
   // Code repository, e.g. "https://github.com/sakibshadman/pixels-to-phase-code".
   code: null,
 
-  // In-House Dataset v1.0, released as MPSC-RespView on Hugging Face (gated, request access).
+  // In-House Dataset v1.0, released as MPSC-RespView on Hugging Face (open download).
   dataset: "https://huggingface.co/datasets/shadman-sakib/MPSC-RespView",
 
   // Data card / datasheet for the dataset.
   datacard: "https://huggingface.co/datasets/shadman-sakib/MPSC-RespView/blob/main/README.md",
 
-  // Where people request access to the de-identified recordings (a form URL works best).
-  datasetRequest: "https://huggingface.co/datasets/shadman-sakib/MPSC-RespView",
+  // Files page of the dataset on Hugging Face (download).
+  datasetRequest: "https://huggingface.co/datasets/shadman-sakib/MPSC-RespView/tree/main",
 
   // Poster PDF or image, if you want to share it after the conference.
   poster: null
